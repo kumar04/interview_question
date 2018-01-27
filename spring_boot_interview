@@ -1,0 +1,79 @@
+
+Q 1 Why we should go for spring boot?
+
+To ease the Java-based applications Development, Unit Test and Integration Test Process.
+To reduce Development, Unit Test and Integration Test time by providing some defaults.
+Spring Boot increase Productivity.
+When we talk about defaults, Spring Boot has its own opinions. If you are not specifying the details, it will use its own default configurations. If you want persistence, but don’t specify anything else in your POM file, then Spring Boot configures Hibernate as a JPA provider with an HSQLDB database.
+ To provide bunch of non-functional features/solutions that are very much common to large scale projects (e.g. embedded servers, security, metrics, health checks, externalized configuration).
+Q2 What are the main component of spring boot?
+Spring Boot Framework has mainly four major Components.
+
+Spring Boot Starters(https://www.journaldev.com/7989/key-components-and-internals-of-spring-boot-framework)
+Spring Boot AutoConfigurator
+Spring Boot CLI 
+                    mvn spring-root:run.  :run spring boot application
+
+
+Spring Boot Actuator
+Q3 How to monitor application in different environment?
+Spring Boot Actuator is a sub-project of Spring Boot. It provides several production-grade services to your application out of the box. Once Actuator is configured in your Spring Boot application, you can interact and monitor your application by invoking different HTTP endpoints exposed by Spring Boot Actuator such as application health, bean details, version details, configurations, logger details, etc.
+
+Q4 Why we are returning ResponseEntity from controller method why not direct object?
+
+
+ResponseEntity is meant to represent the entire HTTP response. You can control anything that goes into it: status code, headers, and body.
+
+@ResponseBody is a marker for the HTTP response body and @ResponseStatus declares the status code of the HTTP response.
+
+@ResponseStatus isn't very flexible. It marks the entire method so you have to be sure that your handler method will always behave the same way. And you still can't set the headers. You'd need the HttpServletResponse or a HttpHeaders parameter.
+
+Basically, ResponseEntity lets you do more.
+
+Q5 How to handle exception using spring boot mvc architecture?
+
+@ExceptionHandler(SQLException.class)
+	public String handleSQLException(HttpServletRequest request, Exception ex){
+		logger.info("SQLException Occured:: URL="+request.getRequestURL());
+		return "database_error";
+	}
+Q6.What @SpringBootApplication annotation does?
+The @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration and @ComponentScan with their default attributes
+
+@SpringBootApplication(scanBasePackages = {"com.project.dao", "com.project.controller"})
+
+running start point of your spring boot application.
+
+Q7 Without any configuration file how spring boot scan our bean even we are not writing @Componentscan?
+
+@SpringBootApplication(scanBasePackages = {"com.project.dao", "com.project.controller"})
+
+Q8 How to write test case for controller method? Which framework u r using?
+
+Q9 What are the build tools u r aware?
+
+For java - Ant,Maven,Gradle.
+For .NET framework - NAnt
+c# - MsBuild.
+Q10  How to develop soap web service using spring boot without config?
+@Endpoint
+
+
+@PayloadRoot(namespace = NAMESPACE_URI, localPart = "StudentDetailsRequest")
+@ResponsePayload
+Q11 I want to enable features in specific environment how can I archive using spring boot 
+spring profile
+create dev,preprod and prod properties file
+ava -jar -Dspring.profiles.active=prod target/spring-boot-tutorials-0.0.1-SNAPSHOT.jar
+Q12 .Explain Spring batch architecture , suppose I want to do validation while batch job is running how can I do 
+When you associate an attribute batch job with a data model version, you can select the severity of the checks that will be returned as an error. When an error is returned, you must fix the error before the change will be committed to the feature or used by the template. If a warning is returned, the change will be committed, but it is recommended that you correct the issue if you can
+http://www.javainuse.com/spring/bootbatch
+
+Q13.What is application. Properties if I will keep different name instead of application will it work?
+Yes
+
+Q14.How to enable logging in spring boot
+
+logging.level.org.springframework.web: DEBUG logging.level.org.hibernate: ERROR
+Q15.Difference between soap and rest web services give one example
+https://stackoverflow.com/questions/2131965/main-differences-between-soap-and-restful-web-services-in-java
