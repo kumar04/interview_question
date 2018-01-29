@@ -1,12 +1,47 @@
   #Core Java ,#Spring and #Hibernate
  1.project architecture? 
  2.spring flow? 
- 3.list out all the annotations in spring? 
+ 3.list out all the annotations in spring?
+ @Required,@Autowired,@Qualifier,@Resource,@PostConstruct,@PreDestroy,@Configuration,@Bean,@Import,@Scope,@Lazy,@Value,@ComponentScan
+ @Autowired,@Qualifier,
  4.what are all the annotations you used in your project on restful services? 
+ @GET	import javax.ws.rs.GET;
+@Produces	import javax.ws.rs.Produces;
+@Path	import javax.ws.rs.Path;
+@PathParam	import javax.ws.rs.PathParam;
+@QueryParam	import javax.ws.rs.QueryParam;
+@POST	import javax.ws.rs.POST;
+@Consumes	import javax.ws.rs.Consumes;
+@FormParam	import javax.ws.rs.FormParam;
+@PUT	import javax.ws.rs.PUT;
+@DELETE import javax.ws.rs.DELETE;
  5.in hibernate use of cascade and inverse? 
+ In case of many-to-many relation through intermediary table; "Cascade" says whether a record will be created/updated in the child table.
+ Whereas "Inverse" says whether a record will be created/updated in the intermediary table
  6.first level cache? second level cache in hibernate? 
- 7.waht is diff b/w arraylist and linkedlist? 
+ First-level cache always Associates with the Session object. Hibernate uses this cache by default. Here, it processes one transaction
+ after another one, means wont process one transaction many times. Mainly it reduces the number of SQL queries it needs to generate
+ within a given transaction. That is instead of updating after every modification done in the transaction, it updates the transaction 
+ only at the end of the transaction.
+ Second-level cache always associates with the Session Factory object. While running the transactions, in between it loads the objects 
+ at the Session Factory level, so that those objects will be available to the entire application, not bound to single user. Since the 
+ objects are already loaded in the cache, whenever an object is returned by the query, at that time no need to go for a database 
+ transaction. In this way the second level cache works. Here we can use query level cache also
+ step for activate second level cache:
+ A.in hibernate config file do cache unable. B.add ehcache.xml in hibernate config file
+ C.inside ehcache file written all configuration related thing(idel time,connection maxtime,mintime)
+ D.load ehcache file by using serviceRegistry
+ 7.waht is diff b/w arraylist and linkedlist?
+ ArrayList:uses GrowableArray DataStructure,Linkedlist uses double linkedlist datastructure
+ insertion: arraylist:order(n),linkedlist:order(1)
+ selection:arraylist:oder(1),linkedlist:order(n)
+ Q.what is patch method in rest api?
+Patch REST API
+The PATCH method is the correct choice here as you're updating an existing resource - the group ID. PUT should only be used if you're replacing a resource in it's entirety. 
+Further information on partial resource modification is available in RFC 5789.
+
  8.can you explain the internal flow of hashmap? 
+ hashmap internally uses Hashing technic,inside put method call hash method,this hash method return hashcode of key.
  9.what is the diff b/w hashmap and hashtable? 
  10.diff b/w array and arraylist? 
  11.diff b/w arraylist and vector? 
