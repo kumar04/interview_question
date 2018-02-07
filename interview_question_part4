@@ -1,0 +1,80 @@
+one of the MNC Int Question.
+1.What is factory design pattern.
+Ans:
+2.Single ton dp? for both dp they given to write the code ?
+3.In Which scenario we can go for factory dp and Singleton dp.Where you would apply in your proj.
+Ans:
+first scenario of singleton class:
+A few days ago, I had to implement holding a list of loaded assemblies and its references during program-execution. As this is a bigger project, we're talking about 150 dll-files to look at. In that case, I just didn't want to load the same data again and again whenever I need to get one of these assemblies. Therefore, I used a singleton-class, which creates this certain list on its first call and holds that values until the application gets closed
+second scenario of singleton class:
+Hi, We used the singleton pattern in our utility layers which consist of Loggging, Caching, Service host repositories, Load Balancer... If the question is on how we arrived to the design. There was a performance lag on the utility layer eg, Logging, on diagnosing we observed that there are several instance getting created which are not required in my case. So we adopted Singleton pattern. Hope this helps
+third scenario of singleton class:
+You can use it in remoting when you want to create a shareable service....
+scenario of FACTORY class
+Object's class doesn't know what exact sub-classes it have to create
+Object's class is designed so that objects it creates were specified by sub-classes
+Object's class delegates its duties to auxiliary sub-classes and doesn't know what exact class will take these duties
+4.what is maven ?what is artifact in maven and use of artifact?
+Ans:
+An artifact is a file, usually a JAR, that gets deployed to a Maven repository.
+A Maven build produces one or more artifacts, such as a compiled JAR and a "sources" JAR.
+Each artifact has a group ID (usually a reversed domain name, like com.example.foo), an artifact ID (just a name), and a version string. The three together uniquely identify the artifact.
+A project's dependencies are specified as artifacts.
+5.what is the use of pmd.
+Ans:
+PMD (software) PMD is an open source static Java source code analyzer that reports on issue found within application code. PMD includes built-in rule sets and supports the ability to write custom rules. PMD does not report compilation errors, as it only can process well-formed source files
+6.wap the given no is prime or not.
+
+7.what is Mockito and you seen any disadvantages in Mockito ? is there any other frameworks like Mockito ?
+Ans:
+Don't Replace Asserts with Verify
+No More All or Nothing Testing
+Failure: Expected X received X
+Don't Stop Handrolling Mocks
+
+JustMock or TypeMock
+
+8.how to resolve conflict files while commiting in svn ? how many types of conflicts you are facing ?
+Once in a while, you will get a conflict when you update/merge your files from the repository or when you switch your working copy to a different URL. There are two kinds of conflicts:
+
+file conflicts
+A file conflict occurs if two (or more) developers have changed the same few lines of a file.
+
+tree conflicts
+A tree conflict occurs when a developer moved/renamed/deleted a file or folder, which another developer either also has moved/renamed/deleted or just modified.
+
+Right click on the Solutions folder, click TortoiseSVN -> Show Log.
+Right click the revision you want to revert, select "Revert Changes from this revision"
+Right click the conflicted folders, select "Resolved".
+Commit your 
+
+9.Internal Linked List Implementation ?
+
+The LinkedList is a linear data structure, where each element is a separate object.  Each element i.e Node of a list is comprising two items, the data and reference to the next node. The last node has a reference to null.  The entry point into a linked list is called the head of the list. It should be noted that head is not a separate node, but the reference to the first node.  If the list is empty then the head is a null reference.
+
+public class LinkedlistIS 
+{
+    node head;
+    node sorted;
+ 
+    class node 
+    {
+        int val;
+        node next;
+ 
+        public node(int val) 
+        {
+            this.val = val;
+        }
+    }
+ 
+    void push(int val) 
+    {
+        /* allocate node */
+        node newnode = new node(val);
+        /* link the old list off the new node */
+        newnode.next = head;
+        /* move the head to point to the new node */
+        head = newnode;
+    }
+ }
