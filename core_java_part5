@@ -1,0 +1,17 @@
+Q.Pass-By-Value and Pass-By-Reference in Java.
+Ans:example of function in pass value only
+Q.Internal Linked List Implementation
+Q.ClassNotFoundException Vs NoClassDefFoundError in Java
+ClassNotFoundException occurs when you try to load a class at runtime using Class.forName() or loadClass() methods and requested classes are not found in classpath. Most of the time this exception will occur when you try to run application without updating classpath with JAR files. This exception is a checked Exception derived from java.lang.Exception class and you need to provide explicit handling for it. This exception also occurs when you have two class loaders and if a ClassLoader tries to access a class which is loaded by another classloader in Java. You must be wondering that what actually is classloader in Java. Java ClassLoader is a part of Java Runtime Environment that dynamically loads Java classes in JVM(Java Virtual Machine). The Java Runtime System does not need to know about files and files system because of classloaders.
+3.why we override equals and hashcode method.
+4.which condition we declare constructor as private
+5.what is hibernate dialect property.
+6.what is auboxing and autounboxing.
+7. compare two object equal() is enough or any concept is there .
+8.which version java use explain with example.
+9.what is composition and agrregation explain with example.
+10.IntegerPool and String pool.
+11.diff HQL and SQL.
+12.To write @RestController Update employee Data with StringMVC.
+13.How to find a perticular class Object in a arrayList.
+14.find nth element in a array.
