@@ -1,0 +1,32 @@
+Q.How do you print the missed salaries of employees?
+      User table                                     Salary table               
+       user_id                                        user_id;
+       user_name                                      user-salary;
+    Q. print user-id,user-name,user-sal;
+      select user-id, user-name, user-sal from User us, Salary sal where us.user-id=sal.user-id.
+Q.What is “IN”, “OUT”, “INOUT” parameters?
+         in, out, inout are the modes of  the variables in PL/SQl.
+        “ in” is input variable mode.
+          “out” is output variable mode.
+         “inout” is in-out variable mode.
+Q.When I don’t want to commit the ResultSet obj content, what to do?
+con.setCommit(false);
+Q.What is the difference b/w “order by” and “group by”?
+“order by” used to arrange the data either in ascending or descending order.
+“group by” allows aggregation operations on a column .(having condition also).
+Q.What are the joins? 
+selfjoin,unversal join,inner join,left outer join,right outer join,full join
+Q.Differences b/w Statement and PreparedStatement apart from performance issue?
+  Q:  What are Statements types?
+   1) Statement: It is used to execute a “query” only for one time in the entire application execution.
+  
+  2) PreparedStatement: It is used to execute same “query” for multiple no. of times with the
+                            same/different values. It works with compiled query & allows place holders.
+  
+  3) CallableStatement: It is used to execute PL/SQL Procedures/functions from the Java appl
+
+Q.How to invoke stored procedures from a Java application? 
+          Using CallableStatement & prepareStatement();
+
+
+
