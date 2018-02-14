@@ -1,0 +1,61 @@
+Q.What are oops principles?
+Ans:
+Abstraction, polymorphism, inheritance, encapsulation
+Q.If my class is having 5(all method) abstract methods then can I make it as an interface?
+Ans: yes
+Q.What is polymorphism? 
+Poymorphism is the capability of an action/method to do different things based on an object that it is  acting upon.One form, many implementations
+Q.is overloading and overriding? Give one example?
+Overloading is the process of re-defining a method for multiple times with different Signature.
+Overriding is a process of re-defining a super class original version in its various derived classes through inheritance
+Q.What is encapsulation & abstraction?     
+Encapsulation is, a technique, used to encapsulate the properties &  behaviors of an object.It focuses on inside-view and solves problems at “implementation side”.
+Abstraction refers to the act of representing essential features without including the background details
+Q.What is final ? 
+class, method, variable
+Q.How can you invoke a current class constructor from a method ?
+Using “this”.
+Q.How can you invoke a super class constructor from derived class?
+Using “super()”
+Q.What is “static”? 
+method, variable, block, static nested class
+Q.What is “instanceOf”?
+The operator that checks whether given instance is belongs to the given class or not
+Q.There are class A & class B. How can I get the members of class A & B
+Ans: using inheritance
+Q.Can I create an interface without methods, constants declarations
+Ans: Yes
+Q.Can I place try & catch blocks in finally block
+Yes
+Q.What is POJO & POJI model programming?
+         The programming with no api dependent classes/interfaces
+Q.How Java is Platform Independent?
+ .class file—byte code
+Q.What is Association and Composition?
+is and has a relation
+Q.How can I achieve multiple inheritance in Java without using inheritance?
+Ans : interface
+Q.output
+)    class A{         class B extends  A{              		class D{
+         i=10;               i=20 ;      				p s v m(){
+      printText(){       printText(){  				A a=new B();
+      s.o.p(“from A”);  s.o.p(“from B”);
+}                                               			             a.printText(); // from B
+                     		}					s.o.p( +a.i);   }  // i=10
+Q.What an Interface allows in its inside?
+          Abstract methods, constants, interface.
+
+Q. Can I define a class inside an Interface? 
+          Yes
+
+
+
+
+
+
+
+
+
+
+
+
