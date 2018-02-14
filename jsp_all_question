@@ -1,0 +1,24 @@
+Q.What are the different Scopes in JSP?
+request, page, session, application
+Q.How to disable “Cache” in jsp?  
+      <% resp.setHeader(“cache-control”, ”no-cache”);%> 
+                                  
+     (<meta http-equiv=”cache-control” content=”no-cache”>
+
+             <%resp.setHeader(“pragma”,”no-cache”);%> //http1.0
+                               OR 
+           <meta http-equiv=”pragma” content=”no-cache”>)
+Q.What is default Scope in JSP?
+page
+Q.How to configure a JavaBean in JSP? 
+             <jsp:useBean>
+Q.)   Do you know UML
+No
+Q.Which tools do you used in design documents
+synstran
+Q.What is XML parser, SAX,   DOM parsers?
+Read XML Sax parser
+Q.How do you make the variables applicable to the whole application in JSP
+session scope
+Q.
+
