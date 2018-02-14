@@ -1,0 +1,12 @@
+Q.In an application, one task  has to be done for every 15 minutes. How can you do it?
+Ans: As with the present java SE 8 release with it's excellent date time API with java.time these kind of calculation can be done more easily instead of using java.util.Calendar and java.util.Date.
+•	Use date time class's i.e. LocalDateTime of this new API
+•	Use ZonedDateTime class to handle Time Zone specific calculation including Daylight Saving issues. You will find tutorial and example here.
+Q.What are types of Beans in EJB?
+         Session Bean---Stateless, Statefull
+          Entity Bean
+          MessageDriven Bean
+Q.What is Junit?
+ans:
+A tool for unit testing
+
