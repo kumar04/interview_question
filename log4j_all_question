@@ -1,0 +1,5 @@
+Q.What is Log4j? Can I override the logger class?
+Ans: for track a log of your project,
+final static Logger logger = Logger.getLogger(HelloExample.class);
+Q.Can I display  logging messages on the console?
+Ans: yes using console appender
