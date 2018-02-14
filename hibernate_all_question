@@ -1,0 +1,67 @@
+Q.Can I call a procedure from a HB? How? 
+Ans: Yes,
+<sql-query name="callStockStoreProcedure">
+	<return alias="stock" class="com.mkyong.common.Stock"/>
+	<![CDATA[CALL GetStocks(:stockCode)]]>
+    </sql-query>
+Query query = session.getNamedQuery("callStockStoreProcedure")
+	.setParameter("stockCode", "7277");
+List result = query.list();
+Q.Can I use a big query in Hibernate?
+With "many" queries, you are meeting with the typical N+1 query problem. You load an Entity with Hibernate, which has related objects. With LAZY joins, you'll get a single query for every record. Each query goes through the network to your database server, and it returns the data. This all takes time (opening connection, network latency, lookup, data throughput, etc.).
+
+For a single query (with joins) the lookup and data throughput are larger than with multiple queries. But you'll only have the opening of the connection and network latency just once. So with 100 or more queries you have a small lookup and data throughput, but you will have it 100 times (including opening the connection and network latency).
+Q.What are the relations? 
+        One to one
+        One to many
+        Many to one
+         Many to many
+Q.Tell me few Hibernate interfaces? 
+               i) Configuration(c), 
+              ii) SessionFactory,
+             iii) Session, 
+             iv) Transaction, 
+              v) Query
+Q.How do you create “Criteria”?(to do select operations.)
+       
+         Criteria criteria=session.createCriteria(EmpBean.class);
+                    
+   // select * from Employee where eid between 100 and 200 and firstname in (“raja”,”ramana”));
+        
+               Condition: 1
+       criteria=criteria.add(Expression.between(“no”,new Integer(100)),new Integer(200));
+              
+              Condition: 2
+       criteria=criteria.add(Expression.in(“fname”,new String []{“raja”,”ramana”} )));
+           
+                        List l=ct.list();                // retrieves more selected records
+            for(int x=0;x<l.size();x++){
+              EmpBean emp=(EmpBean) l.get(x);
+                                 
+     S.o.p(emp.getNo()+”\t”+emp.getFname()+”\t”+emp.getLname()+”\t”+emp.getEmail());
+Q.What is Hibernate configuration file?
+          HB dialect, DB  Driver class, Driver class URL, Username, Password
+		  
+Q.What is “Catching “ mechanism? 
+         To minimize n/w round trips.
+             “Session” is default and 
+              “SessionFactory’ explicitly configured.
+Q.Do you know “restriction” and “expression”?
+        Expression.between()
+             Expression.in()
+Q.you know algorithms like increment , sequence, hilo….?
+Yes generate unique identity id
+Q.How do you configure “one to many” association in Hibernate?
+            <set> and <key> and <one-to-many>
+        
+               <set  name="address">                              // child (address table)
+	    	<key  column="emp_id"/>               //primary key of address table
+	   <one-to-many  class="EmpAddress"/>     //pojo class
+	    </set>
+Q.What is HB? What are its files.
+         It is an ORM tool that is there to develop DB independent persistence logic.
+         Hibernate-config.xml,   Hibernate-mapping.xml,  pojo class
+Q.How to integrate HB with Spring?
+          The DAO implementation class of spring must extends HibernateDAOSupport and 
+            implements DAO interface.
+
