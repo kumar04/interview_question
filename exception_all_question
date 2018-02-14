@@ -19,4 +19,7 @@ Q.Differenc b/w Exception & Error
 Ans:
 An Error "indicates serious problems that a reasonable application should not try to catch."
 An Exception "indicates conditions that a reasonable application might want to catch."
+Q. Difference between classNotFoundException and NoClassDefError in which situation we will face this?
+ClassNotFoundException is an exception that occurs when you try to load a class at run time using Class.forName() or loadClass() methods and mentioned classes are not found in the classpath. NoClassDefFoundError is an error that occurs when a particular class is present at compile time, but was missing at run time
+
 
