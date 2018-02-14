@@ -1,0 +1,11 @@
+Q.What are the clone types?
+ans:Java Clone, Shallow Copy and Deep Copy
+Shallow Cloning
+
+it is a bit-wise copy of an object. A new object is created that has an exact copy of the values in the original object. If any of the fields of the object are references to other objects, just the references are copied. Thus, if the object you are copying contains references to yet other objects, a shallow copy refers to the same subobjects.
+
+Deep Cloning.
+
+Deep copy is a complete duplicate copy of an object. If an object has references to other objects, complete new copies of those objects are also made. A deep copy generates a copy not only of the primitive values of the original object, but copies of all subobjects as well, all the way to the bottom. If you need a true, complete copy of the original object, then you will need to implement a full deep copy for the object.
+
+Java supports shallow and deep copy with the Cloneable interface to create copies of objects. To make a clone of a Java object, you declare that an object implements Cloneable, and then provide an override of the clone method of the standard Java Object base class. Implementing Cloneable tells the java compiler that your object is Cloneable. The cloning is actually done by the clone method.
