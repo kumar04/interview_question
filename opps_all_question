@@ -47,7 +47,21 @@ Q.What an Interface allows in its inside?
 
 Q. Can I define a class inside an Interface? 
           Yes
+Q. What are the oop principle, where you used polymorphism in your project?
+Ans:
+Abstraction
+Encapsulation
+Polymorphism
+Inheritance
+Association
+Aggregation
+Composition
+buyBack two created method for outside of france people and france perople 
+Q.Interface - a declaration of methods that are expected of a class. If the class declares they implement the interface, it must provide implementations for all the methods declared by the interface.
 
+Abstract Class - a class that cannot be instantiated. Often it will include one or more methods that are also declared abstract and must be implemented by sub classes for the subclass to be concrete, and therefore able to be instantiated. Does not have to include abstract methods; the documentation may otherwise specify what is required of a valid concrete subclass.
+
+Suppose even if it is permitted, what is the use. Calling the abstract method with object does not yield any purpose as no output.
 
 
 
