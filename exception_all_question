@@ -1,0 +1,22 @@
+Q.While overriding a exception throwing method, does it mandatory that subclass must also throw the same exception? 
+Ans:
+No
+Q.)Difference b/w Checked & Unchecked Exception?
+       Checked Exceptions deal compile time exception regarding the existence of  classes/interfaces
+       But not syntax errors. 
+	   Ex:  ClassNotFoundException---when use a NULL referenced variable to call any   
+                                                       method/variable.
+       InterruptedException,---when two or more threads try to share same Resource(wait() and join()) 
+	   NoSuchFieldException ---when we access the undeclared variable
+	   NoSuchMethodException---when we invoke the undeclared method.
+	   InstantiationException---when we try to create object for a abstract/interface
+
+	   Unchecked Exceptions deal runtime errors.
+	   Ex: ArithmeticException, 
+       ArrayOutOfBoundsException,
+       NullPointerException
+Q.Differenc b/w Exception & Error
+Ans:
+An Error "indicates serious problems that a reasonable application should not try to catch."
+An Exception "indicates conditions that a reasonable application might want to catch."
+
