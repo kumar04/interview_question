@@ -1,0 +1,9 @@
+Q.What is Serialization?
+Ans:Writing the state of an object in to Streams
+Q.How can you made the fields of a class to not serialized?
+Using the modifier called “transient” and static
+Q.What is the use with Generics?
+It avoids explicit type casting.
+Q.
+
+
