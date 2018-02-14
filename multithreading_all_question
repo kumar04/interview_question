@@ -1,0 +1,20 @@
+Q.Write the code for a class which implements the Runnable interface?
+     Public class  RunClass implement Runnable{
+                    -------------
+                   -------------
+       public void run(){
+             ---------
+             }
+        Runnable r=new RunClass();
+        Thread thr=new Thread(r);
+                    thr.start();
+Q.There are m1(), m2() methods and t1,t2 threads. 
+ How can t1 execute m1() and t2 executes m2()?
+Q.What is “join()”? 
+When a current thread wants to finish its complete execution and allow the second thread to do
+its execution then first thread must invoke this join();
+Q.)  What is InterruptedException?
+       When two or more threads try to access same object simultaneously, then this exception  
+         occurs.  Join(), wait(), notify() ,notifyAll() throws InterruptedException.
+
+
