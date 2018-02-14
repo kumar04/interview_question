@@ -1,0 +1,9 @@
+spring
+Q.How do you configured Spring DAO? 
+        In contextApplication.xml
+Q.How to configure “counter” to know no. of  users visited the website?
+take counter variable in init method and increase inside service method
+Q.How to integrate Struts with Spring?
+         ContextLoaderServlet   and
+          applicationContext.xml  configured in struts-config.xml that is there in web.xml
+
