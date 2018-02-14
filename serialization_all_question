@@ -4,6 +4,7 @@ Q.How can you made the fields of a class to not serialized?
 Using the modifier called “transient” and static
 Q.What is the use with Generics?
 It avoids explicit type casting.
-Q.
+Q.What is serializable? If my business object not implement serializable is there any problem?
+not transfer through obj
 
 
