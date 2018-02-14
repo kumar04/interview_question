@@ -4,3 +4,36 @@ Using Comparable Interface by overriding compareTo() method.
 Q.How can you make an ArrayList as Synchronized list?
    List lobj=Collections.synchronizedArrayList(new ArrayLsit());
     Map m=Collections.synchronizedMap(new HashMap());
+. Tell me Hash Map implementation 
+Ans:
+hashmap internally hashing technic ,hashmap retrive hashcode of key.hashcode,passing to indexFor method of hashmap and create bucket of
+this key-value and put inside buket,if same hashcode find then used linkedlist and inside same bucket
+
+4. Difference between Linked List and Array List
+Ans:
+1. Implementation :  ArrayList is the resizable array implementation of list interface , while LinkedList is the Doubly-linked list implementation of the list interface.
+
+
+2. Performance  :  Performance of ArrayList and LinkedList depends on the type of operation
+
+a. get(int index) or search operation :  ArrayList get(int index) operation runs in constant time i.e O(1)  while LinkedList get(int index) operation run time is O(n) .
+
+The reason behind ArrayList being faster than LinkedList is that ArrayList uses index based system for its elements as it internally uses array data structure , on the other hand ,
+LinkedList does not provide index based access for its elements as it iterates either from the beginning or end (whichever is closer) to retrieve the node at the specified element index.
+
+b. insert() or add(Object) operation :  Insertions in LinkedList are generally fast as compare to ArrayList.
+
+In LinkedList adding or insertion is O(1) operation . While in ArrayList, if array is full i.e worst case,  there is extra cost of  resizing array and copying elements to the new array , which makes runtime of add operation in ArrayList O(n) , otherwise it is O(1) .
+
+c. remove(int) operation :  Remove operation in LinkedList is generally same as ArrayList i.e. O(n).
+In LinkedList , there are two overloaded remove methods. one is remove() without any parameter which removes the head of the list and runs in constant time O(1) .
+The other overloaded remove method in LinkedList is remove(int) or remove(Object) which removes the Object or int passed as parameter . This method traverses the LinkedList until it found the Object and unlink it from the original list . Hence this method run time is O(n).
+
+5. How to make a map as synchronized map 
+Ans:
+The Map is not synchornized (not thread-safe). Collections.synchronizedMap() method returns a synchronized (thread-safe) map backed by the specified map. In order to guarantee serial access, it is critical that all access to the backing map is accomplished through the returned map.
+6. What is the difference between Collections.synchronizedMap(m) and concurrent hash map 
+concurrent hash map:lock only entry wise,Collections.synchronizedMap(m):luck entire map
+7. Difference between forEach and iterator 
+In for-each loop, we can’t modify collection, it will throw a ConcurrentModificationException on the other hand with iterator we can modify collection.
+Modifying a collection simply means removing an element or changing content of an item stored in the collection. This occurs because for-each loop implicitly creates an iterator but it is not exposed to the user thus we can’t modify the items in the collections.
