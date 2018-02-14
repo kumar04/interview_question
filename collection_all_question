@@ -1,0 +1,6 @@
+Q.How do you sort on one property(field) of a class?
+Ans:
+Using Comparable Interface by overriding compareTo() method.
+Q.How can you make an ArrayList as Synchronized list?
+   List lobj=Collections.synchronizedArrayList(new ArrayLsit());
+    Map m=Collections.synchronizedMap(new HashMap());
