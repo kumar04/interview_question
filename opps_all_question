@@ -62,7 +62,15 @@ Q.Interface - a declaration of methods that are expected of a class. If the clas
 Abstract Class - a class that cannot be instantiated. Often it will include one or more methods that are also declared abstract and must be implemented by sub classes for the subclass to be concrete, and therefore able to be instantiated. Does not have to include abstract methods; the documentation may otherwise specify what is required of a valid concrete subclass.
 
 Suppose even if it is permitted, what is the use. Calling the abstract method with object does not yield any purpose as no output.
-
+8. Difference between JVM,JRE,JDK?
+JRE=JVM+LIBRARY CLASS
+JDK=JRE+DEVELOPMENT TOOL
+9. What is the minimum requirement to run a java application?
+jdk for developed java application
+10. Why java?
+Java: A simple, object-oriented, distributed, interpreted, robust, secure, architecture neutral, portable, high-performance, multithreaded, and dynamic language.
+11. What are the basic feature of object oriented programming language?
+Inheritance,Polymorphism,Data Hiding,Encapsulation,Overloading,Reusability
 
 
 
