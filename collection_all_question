@@ -37,3 +37,52 @@ concurrent hash map:lock only entry wise,Collections.synchronizedMap(m):luck ent
 7. Difference between forEach and iterator 
 In for-each loop, we can’t modify collection, it will throw a ConcurrentModificationException on the other hand with iterator we can modify collection.
 Modifying a collection simply means removing an element or changing content of an item stored in the collection. This occurs because for-each loop implicitly creates an iterator but it is not exposed to the user thus we can’t modify the items in the collections.
+1. What is object level and class level synchronization?
+Object level locking is mechanism when you want to synchronize a non-static method or non-static code block such that only one thread will be able to execute the code block on given instance of the class. This should always be done to make instance level data thread safe
+Class level locking prevents multiple threads to enter in synchronized block in any of all available instances on runtime. This means if in runtime there are 100 instances of  DemoClass, then only one thread will be able to execute demoMethod() in any one of instance at a time, and all other instances will be locked for other threads. This should always be done to make static data thread safe.
+2. What is the difference between below case?
+Final Map map=new HashMap();
+map.add(1,”IT”);
+map.put(2,”HR”);
+and
+String s=new String(“hello”);
+S=”hey”;
+first statement,map reference variable is not final.
+second is s value assign with hey
+3. Internal of HashMap?
+HashMap works on the principle of Hashing .  To understand Hashing , we should understand the three terms first   i.e  Hash Function , Hash Value and Bucket .
+What is Hash Function , Hash Value  and Bucket ?
+hashCode() function  which returns an integer value is the Hash function. The important point to note that ,  this method is present in Object class ( Mother of all class ) .
+This is the code for the hash function(also known as hashCode method) in Object Class :
+public native int hashCode();
+The most important point to note from the above line :  hashCode method return  int value .
+So the Hash value is the int value returned by the hash function .
+So summarize the terms in the diagram below :
+how hash  map works in java 
+What is bucket ? 
+A bucket is used to store key value pairs . A bucket can have multiple key-value pairs . In hash map, bucket used simple linked list to store objects .
+4. What is collision?
+When you insert the pair (10, 17) and then (10, 20), there is technically no collision involved. You are just replacing the old value with the new value or a given key 10 (since in both the cases, 10 is equal to 10 and also the hash code for 10 is always 10).
+Collision happens when multiple keys hash to the same bucket. In that case, you need to make sure that you can distinguish between those keys. Chaining collision resolution is one of those techniques which is used for this.
+5. What my class need to follow if it has to be added to map?
+override equals and hashcode
+6. What will happen?
+Condition is my hashCode() always returns 1 and equal() always returns false..
+Final Map<Emp,String> map=new HashMap<Emp,String>();
+Emp e1=new Emp(1,”suchi”);
+Emp e2=new Emp(1,”guguli”);
+Emp e3=new Emp(1,”laali”);
+map.put(e1,IT);
+map.put(e2,IT);
+map.put(e3,IT);
+all add to hashmap
+what will be the result? What will happen?
+e3:laali
+its add to map becoz equals method returns always true.
+7. What will be the result of map.get(e2);
+ans:third 
+//in hashmap its check this key in present if key is same then its return update value
+
+12. What is difference between arrayList and linkedList?
+slection:Arraylist(order(1)),linkedList(order(n))
+insert,update:Arraylist(order(n)),linkedList(order(1))
