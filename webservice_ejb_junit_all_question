@@ -1,7 +1,9 @@
 Q.In an application, one task  has to be done for every 15 minutes. How can you do it?
-Ans: As with the present java SE 8 release with it's excellent date time API with java.time these kind of calculation can be done more easily instead of using java.util.Calendar and java.util.Date.
+Ans: As with the present java SE 8 release with it's excellent date time API with java.time these kind of calculation can be done more 
+easily instead of using java.util.Calendar and java.util.Date.
 •	Use date time class's i.e. LocalDateTime of this new API
-•	Use ZonedDateTime class to handle Time Zone specific calculation including Daylight Saving issues. You will find tutorial and example here.
+•	Use ZonedDateTime class to handle Time Zone specific calculation including Daylight Saving issues. You will find tutorial and 
+example here.
 Q.What are types of Beans in EJB?
          Session Bean---Stateless, Statefull
           Entity Bean
@@ -9,11 +11,23 @@ Q.What are types of Beans in EJB?
 Q.What is Junit?
 ans:
 A tool for unit testing
-Q.what is maven ?what is artifact in maven and use of artifact?Ans:An artifact is a file, usually a JAR, that gets deployed to a Maven repository.A Maven build produces one or more artifacts, such as a compiled JAR and a "sources" JAR.Each artifact has a group ID (usually a reversed domain name, like com.example.foo), an artifact ID (just a name), and a version string. The three togetheruniquely identify the artifact.A project's dependencies are specified as artifacts.Q.what is the use of pmd.Ans:PMD (software) PMD is an open source static Java source code analyzer that reports on issue found within application code. PMD includes built-in rule setsand supports the ability to write custom rules. PMD does not report compilation errors, as it only can process well-formed source files
-Q.how to resolve conflict files while commiting in svn ? how many types of conflicts you are facing ?Once in a while, you will get a conflict when you update/merge your files from the repository or when you switch your working copy to a different URL. There are two kinds of conflicts:
+Q.what is maven ?what is artifact in maven and use of artifact?Ans:An artifact is a file, usually a JAR, that gets deployed to a Maven 
+repository.A Maven build produces one or more artifacts, such as a compiled JAR and a "sources" JAR.Each artifact has a 
+group ID (usually a reversed domain name, like com.example.foo), an artifact ID (just a name), and a version string. The three 
+togetheruniquely identify the artifact.A project's dependencies are specified as artifacts.
+Q.what is the use of pmd.Ans:PMD (software) PMD is an open source static Java source code analyzer that reports on issue found within 
+application code. PMD includes built-in rule setsand supports the ability to write custom rules. PMD does not report compilation errors, 
+as it only can process well-formed source files
+Q.how to resolve conflict files while commiting in svn ? how many types of conflicts you are facing ?Once in a while, you will get a 
+conflict when you update/merge your files from the repository or when you switch your working copy to a different URL. There are two kinds
+of conflicts:
 file conflictsA file conflict occurs if two (or more) developers have changed the same few lines of a file.
-tree conflictsA tree conflict occurs when a developer moved/renamed/deleted a file or folder, which another developer either also has moved/renamed/deleted or just modified.
+tree conflictsA tree conflict occurs when a developer moved/renamed/deleted a file or folder, which another developer either also has
+moved/renamed/deleted or just modified.
 Right click on the Solutions folder, click TortoiseSVN -> Show Log.Right click the revision you want to revert, select "Revert Changes from this revision"Right click the conflicted folders, select "Resolved".Commit your 
-7.what is Mockito and you seen any disadvantages in Mockito ? is there any other frameworks like Mockito ?Ans:Don't Replace Asserts with VerifyNo More All or Nothing TestingFailure: Expected X received XDon't Stop Handrolling Mocks
+7.what is Mockito and you seen any disadvantages in Mockito ? is there any other frameworks like Mockito ?Ans:Don't Replace Asserts 
+with VerifyNo More All or Nothing TestingFailure: Expected X received XDon't Stop Handrolling Mocks
 JustMock or TypeMock
+Q.Which cvs tool are you using? What are the methods that are there?Ans: svn ,commit,update,merge,checkin,checkoutQ.How do you maintain 
+versions in your project? Ans:Using SVN
 
