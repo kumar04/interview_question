@@ -71,7 +71,28 @@ jdk for developed java application
 Java: A simple, object-oriented, distributed, interpreted, robust, secure, architecture neutral, portable, high-performance, multithreaded, and dynamic language.
 11. What are the basic feature of object oriented programming language?
 Inheritance,Polymorphism,Data Hiding,Encapsulation,Overloading,Reusability
+Q.Pass-By-Value and Pass-By-Reference in Java.
+Ans:give example of function,Java always pass value only becoz variable inside function is changed value only
+Q.which condition we declare constructor as private.
+The constructor can only be accessed from static factory method inside the class itself. Singleton can also belong to this category.
+A utility class, that only contains static methods.
+Q.what is auboxing and autounboxing.
+Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes. For example, converting an int to an Integer, a double to a Double, and so on. If the conversion goes the other way, this is called unboxing.
+Q. compare two object equal() is enough or any concept is there .
+hashCode() method is used to get a unique integer for given object. This integer is used for determining the bucket location, when this object needs to be stored in some HashTable like data structure. By default, Object’s hashCode() method returns and integer representation of memory address where object is stored.
 
+equals() method, as name suggest, is used to simply verify the equality of two objects. Default implementation simply check the object references of two objects to verify their equality.
+Q.which version java use explain with example.
+1.8 
+Q.what is composition and agrregation explain with example.
+Aggregation vs Composition
+
+Dependency: Aggregation implies a relationship where the child can exist independently of the parent. For example, Bank and Employee, delete the Bank and the Employee still exist. whereas Composition implies a relationship where the child cannot exist independent of the parent. Example: Human and heart, heart don’t exist separate to a Human
+Type of Relationship: Aggregation relation is “has-a” and composition is “part-of” relation.
+Type of association: Composition is a strong Association whereas Aggregation is a weak Association.
+
+Q.IntegerPool and String pool.
+No, the constant pool for numbers doesn't work the same way as for strings. For strings, only compile-time constants are interned - whereas for the wrapper types for integer types, any boxing operation will always use the pool if it's applicable for that value. So for example:
 
 
 
