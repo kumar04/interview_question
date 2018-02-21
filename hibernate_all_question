@@ -65,3 +65,11 @@ Q.How to integrate HB with Spring?
           The DAO implementation class of spring must extends HibernateDAOSupport and 
             implements DAO interface.
 
+Q.what is hibernate dialect property.
+The class name of a Hibernate org.hibernate.dialect.Dialect which allows Hibernate to generate SQL optimized for a particular relational
+database
+Q.diff HQL and SQL.
+SQL is based on a relational database model whereas HQL is a combination of object-oriented programming with relational database 
+concepts.
+SQL manipulates data stored in tables and modifies its rows and columns. HQL is concerned about objects and its properties.
+SQL is concerned about the relationship that exists between two tables while HQL considers the relation between two objects.
