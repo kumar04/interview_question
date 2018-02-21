@@ -86,3 +86,27 @@ ans:third
 12. What is difference between arrayList and linkedList?
 slection:Arraylist(order(1)),linkedList(order(n))
 insert,update:Arraylist(order(n)),linkedList(order(1))
+Q.Internal Linked List Implementation
+The Node class from Linked List implementation
+
+private static class Node<E> {
+    E item;
+    Node<E> next;
+    Node<E> prev;
+    Node(Node<E> prev, E element, Node<E> next) {
+        this.item = element;
+        this.next = next;
+        this.prev = prev;
+    }
+}
+A graphical representation of Linked list with nodes
+
+Here is a graphical representation of a linked list to help you better visualize how actually a node will look like and how it connects with other nodes through next and prev references. 
+Since reference is stored for both next and previous nodes that is why it is a doubly linked list implementation.
+Q.How to find a perticular class Object in a arrayList.
+The easy way is to make a for where you verify if the atrrtibute name of the custom object have the desired string
+
+    for(Datapoint d : dataPointList){
+        if(d.getName() != null && d.getName().contains(search))
+           //something here
+    }
