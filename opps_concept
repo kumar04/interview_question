@@ -4,7 +4,8 @@
 	-->interface
 3.multiple two design without multiple symbol
 4.Abstraction:
-	hiding complex implementation to end user.if two method available in interface,after i want to add third party functionality which is unknown to end user.
+	hiding complex implementation to end user.if two method available in interface,after i want to add third party functionality 
+	which is unknown to end user.
 5.what is oops?
 		class Test{
 		private double bikePrice=0.0;
@@ -19,6 +20,7 @@
 	}
 6.interface vs abstract class
 	in abstract class control over business logic
-	in real time example using template design implementation abstract class logic,using strategy design pattern implementation interface
+	in real time example using template design implementation abstract class logic,using strategy design pattern 
+	implementation interface.
 	100% percentage abstract class is called interface
 
